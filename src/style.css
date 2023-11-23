@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.masonry {
+  column-count: 5;
+  column-gap: 10px;
+}
+.masonry img {
+  width: 100%;
+  display: block;
+}
+.masonry figure {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+.masonry figure > img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+.masonry figure a {
+  color: black;
+  text-decoration: none;
+}
+
+.v-list-item {
+  border-radius: 0 !important;
+}
+
+.v-list-item--active span.v-list-item__overlay {
+  display: none !important;
+}
+.v-list-item--active {
+  background-color: white !important;
+  position: relative;
+}
+.v-list-item .v-list-item--active .v-list-item-title {
+  color: #4f359b !important;
+}
+.v-list-item--active::before {
+  display: block;
+  content: " ";
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #4f359b;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
